@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8"/>
+    <title>您所访问的文件或页面不存在</title>
+    <meta name="copyright" content="Copyright Nebula Software Studio">
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: #dcdcdc;
+        }
+
+        img {
+            border: 0;
+        }
+
+        ul {
+            padding-left: 2em;
+        }
+
+        html {
+            overflow-y: scroll;
+            background: #3b79b7;
+        }
+
+        body {
+            font-family: "思源宋体 CN", 微软雅黑, serif;
+            margin: 0;
+            line-height: 1.4;
+            font-size: 75%;
+            text-align: center;
+            color: white;
+        }
+
+        .error {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .error {
+            font-weight: bold;
+            line-height: 1;
+            padding-bottom: 20px;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .error_info_desc {
+            text-align: center;
+            font-weight: bold;
+            font-size: 27px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .explain {
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            line-height: 1.5;
+            margin: 30px auto;
+            padding: 17px;
+        }
+
+        .cause {
+            text-align: left;
+        }
+
+        .cause li {
+            color: #666;
+        }
+
+        .cause_title {
+            letter-spacing: 1px;
+            font-weight: bold;
+            padding: 0;
+        }
+
+        .white_box {
+            margin: 15px auto 0;
+            background-color: white;
+        }
+
+        .footer{
+            font-size: 8pt;
+            color: #ffffff;
+            margin: 60px auto 20px auto;
+        }
+
+        /* ====================
+
+          スマートフォン
+
+        ======================= */
+        @media only screen and (min-width: 0) and (max-width: 767px) {
+            #base {
+                padding: 30px 10px;
+            }
+
+            .error .error_info {
+                font-size: 26px;
+            }
+
+            .error .error_code {
+                font-size: 60px;
+            }
+
+            .error_info_desc {
+                font-size: 16px;
+            }
+
+            .explain {
+                font-size: 14px;
+            }
+
+            .cause_title {
+                margin-top: 45px;
+                font-size: 16px;
+            }
+
+            .cause {
+                padding: 20px;
+                font-size: 12px;
+            }
+        }
+
+        /* ====================
+
+           パソコン＆タブレット
+
+        ======================= */
+
+        @media only screen and (min-width: 768px) {
+            #base {
+                margin-top: 80px;
+            }
+
+            .error .error_info {
+                font-size: 50px;
+            }
+
+            .error .error_code {
+                font-size: 110px;
+            }
+
+            .explain {
+                font-size: 16px;
+                width: 660px;
+            }
+
+            .white_box {
+                width: 680px;
+                margin-bottom: 50px;
+            }
+
+            .cause_title {
+                font-size: 20px;
+                margin-top: 80px;
+            }
+
+            .cause {
+                padding: 30px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- base start -->
+<div id="base">
+    <div class="error">
+        <h1 class="error_code">404</h1>
+        <h1 class="error_info">File Not Found</h1>
+    </div>
+    <div class="error_info_desc">找不到您正在尝试访问的页面或文件。</div>
+    <p class="explain">出现这个错误，即表示您所指定的文件或页面不存在、更名或已经移除。</p>
+    <h3 class="cause_title">以下是出现本错误的可能的缘由。</h3>
+    <div class="white_box">
+        <div class="cause">
+            <ul>
+                <li>您尝试访问的文件并不存在（文件存储的位置不准确）。</li>
+                <li>URL地址有误。</li>
+            </ul>
+        </div>
+    </div>
+    <p class="footer">本系统基于 <a href="https://nebula-soft.com" target="_blank">Nebula Solar Network Platform</a> 运作。</p>
+</div>
+<!-- base end -->
+</body>
+</html>

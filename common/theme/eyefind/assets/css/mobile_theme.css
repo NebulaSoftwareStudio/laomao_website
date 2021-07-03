@@ -1,0 +1,46 @@
+/**
+ * Eyefind Page Element StyleSheet Library
+ * (for mobile screen compatible version)
+ *
+ * Created by Nebula Software Studio  - Hanawa Hinata
+ * Copyright by Rockstar Games.
+ *
+ * File updated on 2020/12/20
+ */
+
+@media (min-width: 375px) {
+
+}
+
+@media (max-width: 768px) {
+    .brand_box .logo_box{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .brand_box .logo_box .mail_function{
+        margin-top: 0;
+        /*display: none;*/
+    }
+
+    .brand_box .weather_box{
+        display: none;
+    }
+
+
+    .search_box .button_box{
+        margin: 0 auto;
+    }
+
+    .content .index_right_box{
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+
+    .not_found {
+        width: 250px;
+        height: 250px;
+    }
+}

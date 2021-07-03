@@ -1,0 +1,376 @@
+
+.yellow_hr{
+    width: 100%;
+    height: 10px;
+    background-color: #fabe0e;
+}
+
+.head_banner{
+    width: 100%;
+    height: 500px;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    background-color: #000000;
+    background-image: url("../../../../../assets/images/year_2020/banner.jpg");
+    background-size: cover;
+    background-position: center bottom;
+}
+
+
+.head_banner .head_banner_content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 40px;
+    color: #ffffff;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.head_banner .head_banner_content .info{
+    color: #ffffff;
+    line-height: 100%;
+    font-size: 8pt;
+}
+
+.head_banner .head_banner_content .info:after{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 2px;
+    background-color: rgba(255,255,255,1);
+    margin: 10px 0 10px 0;
+}
+
+.head_banner .head_banner_content h1{
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+
+.head_banner .head_banner_content p{
+    color: #d9d9d9;
+    /*line-height: 27px;*/
+    font-size: 11pt;
+}
+
+
+.head_banner_list{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.head_banner_list .item{
+    display: block;
+    flex: auto;
+    height: 200px;
+    flex-wrap: wrap;
+    background-color: #000000;
+    /*margin: 10px;*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*.head_banner_list .item:first-child{*/
+/*    margin-left: 0;*/
+/*}*/
+
+/*.head_banner_list .item:last-child{*/
+/*    margin-right: 0;*/
+/*}*/
+
+
+.head_banner_list .item.year{
+    width: 250px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head_banner_list .item.year .area_item{
+    width: 100%;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
+    color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.head_banner_list .item.year .area_item.china{
+    background-image: url("../../../../../assets/images/year_2020/area/china.jpg");
+}
+
+.head_banner_list .item.year .area_item.roc{
+    background-image: url("../../../../../assets/images/year_2020/area/roc.jpg");
+}
+
+.head_banner_list .item.year .area_item.japan{
+    background-image: url("../../../../../assets/images/year_2020/area/japan.jpg");
+}
+
+.head_banner_list .item.year .area_item.korea{
+    background-image: url("../../../../../assets/images/year_2020/area/korea.jpg");
+}
+
+
+.head_banner_list .item.covid-19{
+    width: 500px;
+    background-image: url("../../../../../assets/images/year_2020/COVID-19.jpg");
+}
+
+.head_banner_list .item.covid-19 .covid-19-title{
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: background-color 200ms ease-in-out;
+}
+
+.head_banner_list .item.covid-19 .covid-19-title:hover{
+    background-color: rgba(0,0,0,0.5);
+    transition: background-color 200ms ease-in-out;
+}
+
+.head_banner_list .item.covid-19 .covid-19-title h1{
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+.head_banner_list .item.covid-19 .covid-19-title p{
+    font-size: 11pt;
+}
+
+.head_banner_list .item.guide_index{
+    width: 250px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.head_banner_list .item.guide_index h1{
+    color: #ffffff;
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+
+.head_banner_list .item.guide_index .guide_index_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.head_banner_list .item.guide_index .guide_index_list .guide_index_item{
+    flex: auto;
+    margin: 5px;
+    text-align: center;
+}
+
+
+
+/*单个月*/
+.month_item{
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+
+.month_item .month_title{
+    font-size: 25pt;
+    height: 100px;
+    font-weight: bolder;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.month_item .month_title:after{
+    content: '';
+    display: block;
+    width: 130px;
+    height: 100px;
+    background-color: rgba(72,139,194,.14);
+    position: absolute;
+    left: 0;
+}
+
+.month_item .month_title:before{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: rgb(72,139,194);
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.month_item .month_title span{
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    background-color: rgb(72,139,194);
+}
+
+
+.month_item .month_news_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px auto;
+}
+
+.month_item .month_news_list .news_item{
+    width: 323px;
+    flex: auto;
+    overflow: hidden;
+    margin: 5px;
+    background-color: #ffffff;
+    transition: box-shadow 100ms ease-in-out;
+}
+
+.month_item .month_news_list .news_item:hover{
+    box-shadow: 0 20px 20px -10px rgba(0,0,0,0.2);
+    transition: box-shadow 100ms ease-in-out;
+}
+
+.month_item .month_news_list .news_item .topic{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    font-size: 10pt;
+    color: #d9d9d9;
+    background-color: #888888;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.month_item .month_news_list .news_item .topic img{
+    display: block;
+    width: 100%;
+}
+
+.month_item .month_news_list .news_item .info{
+    width: 100%;
+    height: 126px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+.month_item .month_news_list .news_item .info .time{
+    width: 250px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    color: #888888;
+    font-size: 8pt;
+    position: relative;
+}
+
+.month_item .month_news_list .news_item .info .time:after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: rgb(72,139,194);
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.month_item .month_news_list .news_item .info .title{
+    font-size: 12pt;
+    color: #000000;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 5px 20px 20px 20px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.month_item .load_more{
+    width: 95%;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px auto 20px auto;
+    height: 50px;
+    background-color: rgba(72,139,194,1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid rgb(72,139,194);
+    user-select: none;
+}
+
+.month_item .load_more:hover{
+    opacity: .7;
+}
+
+.month_item .no_content{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+
+/*返回顶部*/
+#return_top {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+}
+
+#return_top:hover{
+    opacity: .7;
+    transition: opacity 200ms ease-in-out;
+}
+
+#return_top svg{
+    width: 50px;
+    height: 50px;
+}
