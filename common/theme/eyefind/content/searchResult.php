@@ -41,7 +41,7 @@ if (sizeof($site_list) !== 0) {
 
         <div class="site_list">
             <?php for ($i = 0; $i < sizeof($site_list); $i++) { ?>
-                <a class="item" href="<?php echo $site_list[$i]["url"]; ?>" title="<?php echo $site_list[$i]["name"]; ?>" target="_blank">
+                <a class="item" href="<?php echo $site_list[$i]["methods"]; ?>://<?php echo $site_list[$i]["url"]; ?>" title="<?php echo $site_list[$i]["name"]; ?>" target="_blank">
                     <img class="logo" src="<?php echo $site_list[$i]["image"]; ?>" alt="<?php echo $site_list[$i]["name"]; ?>" />
                     <div class="info">
                         <div class="title"><?php echo $site_list[$i]["name"]; ?></div>

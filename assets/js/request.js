@@ -2,72 +2,87 @@
  * XML Http Request Library
  * composed by Hanawa Hinata
  *
- * Last Updated on 2020/12/20
+ * Last Updated on 2021/09/07
  *
  */
 
 export default {
-    getAction(url,queryParam,header){
-        return new Promise((resolve, reject) => {
+    getAction(options){
+        // url,param,success
+        // console.log(options)
+        try{
             let xhr = new XMLHttpRequest();
 
             // mixin queryParam
-            if(queryParam!==undefined&&queryParam!==null&&queryParam!==''){
+            if(options.param != null && options.param !== ''){
                 let queryParamUrlArray = [];
-                for(let index in queryParam){
-                    queryParamUrlArray.push(index+'='+queryParam[index]);
+                for(let index in options.param){
+                    queryParamUrlArray.push(index+'='+options.param[index]);
                 }
-                url += '?' + queryParamUrlArray.join('&');
+                options.url += '?' + queryParamUrlArray.join('&');
             }
 
             // minix header
-            if(header!==undefined&&header!==null&&header!==''){
-                for(let index in header){
-                    xhr.setRequestHeader(index, header[index]);
+            if(options.header != null && options.header !== ''){
+                for(let index in options.header){
+                    xhr.setRequestHeader(index, options.header[index]);
                 }
             }
+            xhr.timeout = 9000;
 
-
-            xhr.open('GET', url, false);
             xhr.onreadystatechange = function (e) {
-                let response = null;
-                try{
-                    response = JSON.parse(xhr.response);
+                if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    let response = null;
+                    try{
+                        response = JSON.parse(xhr.response);
+                    }
+                    catch{
+                        response = xhr.response;
+                    }
+                    options.success(response);
                 }
-                catch{
-                    response = xhr.response;
-                }
-                resolve(response)
             };
+            xhr.open('GET', options.url, true);
             xhr.send(null);
-        })
+        }
+        catch(err){
+            options.fail(err);
+        }
+
+
     },
 
-    postAction(url,queryParam,header){
-        return new Promise((resolve, reject) => {
+    postAction(options){
+        try{
             let xhr = new XMLHttpRequest();
 
             // minix header
-            if(header!==undefined&&header!==null&&header!==''){
-                for(let index in header){
-                    xhr.setRequestHeader(index, header[index]);
+            if(options.header != null && options.header !== ''){
+                for(let index in options.header){
+                    xhr.setRequestHeader(index, options.header[index]);
                 }
             }
 
-
-            xhr.open('POST', url, false);
             xhr.onreadystatechange = function (e) {
-                let response = null;
-                try{
-                    response = JSON.parse(xhr.response);
+                if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    let response = null;
+                    try{
+                        response = JSON.parse(xhr.response);
+                    }
+                    catch{
+                        response = xhr.response;
+                    }
+                    options.success(response);
                 }
-                catch{
-                    response = xhr.response;
-                }
-                resolve(response)
+
             };
-            xhr.send(queryParam);
-        })
+            xhr.open('POST', options.url, true);
+            xhr.send(options.param);
+        }
+        catch(err){
+            options.fail(err);
+        }
+
     },
 
     putAction(){

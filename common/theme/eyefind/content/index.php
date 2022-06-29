@@ -18,7 +18,7 @@ $kotoba_index = rand(0,(sizeof($kotoba)-1));
 <div class="content">
     <div class="index_left_box">
         <div class="model news">
-            <a href="https://solidot.org" target="_blank" title="solidot 奇客中国">
+            <a href="http://solidot.org" target="_blank" title="solidot 奇客中国">
                 <img class="source_site_logo" src="assets/images/sites/solidot.jpg" alt="solidot.org"/>
             </a>
 
@@ -32,7 +32,7 @@ $kotoba_index = rand(0,(sizeof($kotoba)-1));
 
             <div class="read_more">
                 <a class="item" id="news_link" href="javascript:" target="_blank" title="查看完整文章">阅读全文</a>
-                <a class="item" href="https://solidot.org" target="_blank" title="查看历史文章列表">新闻列表</a>
+                <a class="item" href="http://solidot.org" target="_blank" title="查看历史文章列表">新闻列表</a>
             </div>
 
             <div class="disable_cover" id="news_cover">

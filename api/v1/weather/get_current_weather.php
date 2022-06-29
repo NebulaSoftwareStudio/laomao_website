@@ -1,10 +1,12 @@
 <?php
 /**
- * 天气
+ * 获取天气信息
  */
-require "../../../common/globalVar.php";
+
 require "../../../common/request.php";
-$location = $_GET["location"];
+require "../../../common/globalVar.php";
+
+$location = $_GET["location"]??'';
 
 $city_info = getAction("https://geoapi.qweather.com/v2/city/lookup?location=".$location."&key=".$GLOBALS['QWEATHER_KEY'], "");
 $city_info = json_decode($city_info);

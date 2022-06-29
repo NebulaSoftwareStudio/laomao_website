@@ -48,31 +48,39 @@ window.onload = function () {
 function getNewsList(monthIndex){
     if(!month_object[monthIndex].loading){
         let queryParam = {
+            year: 2020,
             month: month_object[monthIndex].month,
             page: month_object[monthIndex].currentPage
         }
         month_object[monthIndex].loading = true;
-        requestAction.getAction("../api/v1/external/get_news_by_month.php",queryParam).then((res) => {
-            //赋值
-            month_object[monthIndex].total = res.total_count;
-            //判断有没有返回数据
-            if(res.news_list.length > 0){
-                renderAppendNewsList(monthIndex, res.news_list);
-                month_object[monthIndex].currentPage += 1;
-            }
-            else{
-                //判断是不是第一页。如果第一页都没查出来，那这一月就是空的
-                if(month_object[monthIndex].currentPage === 0){
-                    renderAppendBlankList(monthIndex)
+
+        requestAction.getAction({
+            url: "../api/v1/external/get_news_by_month.php",
+            param: queryParam,
+            success: function (res){
+                //赋值
+                month_object[monthIndex].total = res.total_count;
+                //判断有没有返回数据
+                if(res.news_list.length > 0){
+                    renderAppendNewsList(monthIndex, res.news_list);
+                    month_object[monthIndex].currentPage += 1;
                 }
-                //把加载更多的按钮去掉。
-                removeLoadMoreButton(monthIndex)
+                else{
+                    //判断是不是第一页。如果第一页都没查出来，那这一月就是空的
+                    if(month_object[monthIndex].currentPage === 0){
+                        renderAppendBlankList(monthIndex)
+                    }
+                    //把加载更多的按钮去掉。
+                    removeLoadMoreButton(monthIndex)
+                }
+                month_object[monthIndex].loading = false;
+            },
+            fail: function (err){
+                month_object[monthIndex].loading = false;
+                console.log("错误",err,monthIndex);
             }
-        }).catch((err) => {
-            console.log("错误",err,monthIndex);
-        }).finally(() => {
-            month_object[monthIndex].loading = false;
         })
+
     }
     else{
 

@@ -2,6 +2,7 @@
 
 require "../common/globalVar.php";
 require "../common/database.php";
+//$news_list = select_more_data("select * from `rss_news` where ``");
 
 ?>
 
@@ -280,12 +281,9 @@ require "../common/database.php";
         <a href="../?page=about&classify=about">关于本站</a>
         |
         <a href="../?page=about&classify=license">开放源代码许可</a>
-
     </p>
-    <p>&copy;<?php echo date('Y'); ?>
-        <a href="https://nebula-soft.com/" target="_blank">Nebula Software Studio</a>
-        AllRight Reserved.
-        <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备10596363号</a><br>
+    <p>&copy;2020 <a href="http://nebula-soft.com/" target="_blank">Nebula Software Studio</a> AllRight Reserved. <a
+                href="http://beian.miit.gov.cn/" target="_blank">鲁ICP备10596363号</a><br>
     </p>
 </div>
 <!-- footer end -->
