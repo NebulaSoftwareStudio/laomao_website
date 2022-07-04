@@ -15,5 +15,14 @@ $GLOBALS['DATABASE_PASSWORD'] = "【你的数据库密码】";
 // 和风天气开发者 key
 $GLOBALS['QWEATHER_KEY'] = "【你的和风天气开发者key】";
 
+// Telegram 机器人配置
+$GLOBALS['TELEGRAM_BOT_ID'] = '【你的Telegram机器人ID】';
+$GLOBALS['TELEGRAM_BOT_ACCESS_TOKEN'] = '【你的Telegram机器人Token】';
+
+// DingTalk 机器人配置
+$GLOBALS['DINGTALK_BOT_KEY'] = '【你的钉钉机器人Key】';
+$GLOBALS['DINGTALK_BOT_ACCESS_TOKEN'] = '【你的钉钉机器人Token】';
+
 // 版本号
-$GLOBALS['SITE_VERSION'] = "20220314001";
+$GLOBALS['SITE_VERSION'] = "20220714001";
+

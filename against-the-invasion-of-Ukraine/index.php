@@ -1,5 +1,6 @@
 <?php
 $baseUrl = "../";
+$page_title = "俄罗斯对乌克兰的入侵与我们的态度";
 ?>
 <!DOCTYPE html>
 <html lang="zh">

@@ -1,8 +1,6 @@
 <?php
-
 require "../common/globalVar.php";
 require "../common/database.php";
-//$news_list = select_more_data("select * from `rss_news` where ``");
 
 ?>
 

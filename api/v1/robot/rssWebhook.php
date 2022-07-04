@@ -42,8 +42,8 @@ for ($i = sizeof($list); $i >= 0; $i--) {
 
         // 获取钉钉消息推送 hook Token
         $currentTime = getMillisecond();
-        $access_token = "1f9cc6956f1a2d1250e663b21ca700b27f923d8f74427621eec766d303da07f0";
-        $key = "SECab806e9d8b37dc8a931e210ea2135141729d60c433fb69d80779121eea033349";
+        $access_token = $GLOBALS['DINGTALK_BOT_ACCESS_TOKEN'];
+        $key = $GLOBALS['DINGTALK_BOT_KEY'];
         $keyEncode = $key;
         $keyString = "$currentTime\n$keyEncode";
         $keyStringEncode = $keyString;
@@ -51,12 +51,6 @@ for ($i = sizeof($list); $i >= 0; $i--) {
         $webhook = "https://oapi.dingtalk.com/robot/send?access_token=$access_token&timestamp=$currentTime&sign=$hashResult";
         $result = request_by_curl($webhook, json_encode($pushData));
         echo $result;
-
-
-        // $post_text = '* ' . $list[$i]["title"] . ' * ' . strip_tags($list[$i]["description"]);
-        // $telegramUrl = "https://api.telegram.org/bot1738516378:AAG6j1Cd0wuSZtm2fxrGbBiLXPx7pFK8tEs/sendMessage?chat_id=-1001194014875&parse_mode=Markdown&text=" . $post_text;
-        // $result = request_by_curl($telegramUrl, '{}');
-        // echo $result;
 
 
         //插入数据库

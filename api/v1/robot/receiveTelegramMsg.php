@@ -1,10 +1,16 @@
 <?php
 
+/**
+ * 测试脚本，接收Telegram消息后自动回复机器人实现
+ */
+
+require "../../../common/globalVar.php";
+
 $input = file_get_contents('php://input');
 $input = json_decode($input, true);
 
 
-$url = 'https://api.telegram.org/bot1738516378:AAG6j1Cd0wuSZtm2fxrGbBiLXPx7pFK8tEs/sendMessage';
+$url = 'https://api.telegram.org/'.$GLOBALS['TELEGRAM_BOT_ID'].':'.$GLOBALS['TELEGRAM_BOT_ACCESS_TOKEN'].'/sendMessage';
 //$param = "?chat_id=".$chatId."&text=".$text;
 $data = [
     'chat_id' => $input["message"]["chat"]["id"],
@@ -18,9 +24,9 @@ if ($result['ok'] == true) {
     echo false;
 }
 
-$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-fwrite($myfile, json_encode($input));
-fclose($myfile);
+//$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+//fwrite($myfile, json_encode($input));
+//fclose($myfile);
 
 
 
