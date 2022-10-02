@@ -17,7 +17,7 @@ $theme_index = rand(0,2);
     <meta charset="UTF-8">
 
     <!-- SEO -->
-    <title>欢迎查看 2020 年新闻时间线 | Laomao - 把握时代脉搏，倾听世界声音</title>
+    <title>欢迎查看 2021 年新闻时间线 | Laomao - 把握时代脉搏，倾听世界声音</title>
     <meta name="Description" content="我们在首页提供了第三方新闻源丰富您的使用体验，同时我们也进行存档供您回顾这一年推送的全部新闻消息。">
     <meta name="Keywords" content="LaoMao,老猫,老帽,搜索,门户">
     <meta name="author" content="Nebula Software Studio">
