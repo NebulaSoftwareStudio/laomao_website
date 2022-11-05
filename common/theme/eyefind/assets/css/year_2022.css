@@ -1,0 +1,361 @@
+.head {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* 页面主要banner */
+.main_banner {
+    width: 100%;
+    background-color: #000000;
+    height: 100vh;
+    margin-top: -140px;
+    background-image: url("https://ychef.files.bbci.co.uk/1600x900/p0d03j4t.webp");
+    background-size: cover;
+    background-position: center center;
+}
+
+.main_banner .background-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 1) 100%);
+}
+
+.main_banner .content {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    /*padding: 180px 40px 40px;*/
+    padding: 40px;
+    margin: 0 auto;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.main_banner .content .title {
+    font-size: 30pt;
+}
+
+.main_banner .content .play_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    background-image: url("../../../../../assets/images/year_2022/common/playBtnWhite.svg");
+    background-size: cover;
+}
+
+.main_banner .content .play_button:hover {
+    transform: scale(1.2);
+    transition: transform 200ms ease-in-out;
+}
+
+.main_banner .content .sub_title {
+    font-size: 15pt;
+    margin-top: 10px;
+}
+
+
+/*引言*/
+.main_description_box {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 0 0 40px 0;
+}
+
+.main_description_box .content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.main_description_box .content .title {
+    font-size: 20pt;
+    margin: 20px 0;
+}
+
+.main_description_box .content .time {
+    font-size: 10pt;
+    color: #888888;
+    margin: 10px 0;
+}
+
+
+.main_description_box .content p {
+    font-size: 13pt;
+    margin: 5px 0;
+}
+
+/*世界主要国家纪年列表*/
+.century_name_box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.century_name_box .item {
+    width: 25%;
+    height: 50px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.century_name_box .item.lunar {
+    background-image: url("../../../../../assets/images/year_2020/area/china.jpg");
+}
+
+.century_name_box .item.roc {
+    background-image: url("../../../../../assets/images/year_2020/area/roc.jpg");
+}
+
+.century_name_box .item.jp {
+    background-image: url("../../../../../assets/images/year_2020/area/japan.jpg");
+}
+
+.century_name_box .item.kp {
+    background-image: url("../../../../../assets/images/year_2020/area/korea.jpg");
+}
+
+/*月份选择列表*/
+.month_box {
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.month_box .content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: column;
+    /*align-items: center;*/
+    justify-content: center;
+    color: #ffffff;
+    overflow: unset;
+    box-sizing: border-box;
+    padding: 0 20px 40px 20px;
+}
+
+.month_box .content h2 {
+    font-size: 20pt;
+    margin: 20px 0 40px;
+}
+
+.month_box .content .month_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+
+.month_box .content .month_list .item {
+    width: 30%;
+    flex: auto;
+    color: #888888;
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+}
+
+
+.month_box .content .month_list .item:hover,
+.month_box .content .month_list .item.active {
+    color: #ffffff;
+    transition: color 200ms ease-in-out;
+}
+
+.month_box .content .month_list ul {
+    width: 100%;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+
+.month_box .content .month_list ul li {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 8pt;
+}
+
+/* 每月新闻 */
+.month_news_box{
+    width: 100%;
+}
+.month_news_box .content{
+    width: 100%;
+}
+.month_news_box .content h2{
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto 40px auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.month_news_box .content .month_list{
+    width: 100%;
+}
+.month_news_box .content .month_item{
+    width: 100%;
+}
+
+.month_news_box .month_title{
+    font-size: 25pt;
+    height: 100px;
+    font-weight: bolder;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    user-select: none;
+}
+
+.month_news_box .month_title:after{
+    content: '';
+    display: block;
+    width: 130px;
+    height: 100px;
+    background-color: rgba(72,139,194,.14);
+    position: absolute;
+    left: 0;
+}
+
+.month_news_box .month_title:before{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: rgb(72,139,194);
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.month_news_box .month_title span{
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    background-color: rgb(72,139,194);
+}
+
+
+.month_news_box .content .month_item .news_list{
+    width: 100%;
+    height: 400px;
+    margin: 20px auto 40px auto;
+    box-sizing: border-box;
+    /*padding: 0 20px;*/
+    position: relative;
+}
+
+.month_news_box .content .month_item .news_list .news_item{
+    position: relative;
+    width: 100%;
+    flex: auto;
+    /*margin: 10px ;*/
+    color: #353535;
+    box-shadow: 0 0 0 0 rgba(0,0,0,.1);
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    transition: box-shadow 200ms ease-in-out;
+    background-color: #ffffff;
+    cursor: default;
+    user-select: none;
+
+}
+
+.month_news_box .content .month_item .news_list .news_item:after{
+    content: '';
+    display: block;
+    width: 95%;
+    height: 5px;
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+    background-color: #d9d9d9;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+
+.month_news_box .content .month_item .news_list .news_item:hover{
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
+    color: #057291;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.month_news_box .content .month_item .news_list .news_item .news_image{
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center center;
+    background-color: #888888;
+}
+
+.month_news_box .content .month_item .news_list .news_item .news_info{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.month_news_box .content .month_item .news_list .news_item .news_info .title{
+    font-size: 15pt;
+    line-height: 100%;
+    margin: 0 0 10px 0;
+}
+
+.month_news_box .content .month_item .news_list .news_item .news_info .description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/*返回顶部*/
+#return_top {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    z-index: 99;
+    right: 50px;
+    bottom: 100px;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+}
+
+#return_top:hover {
+    opacity: .7;
+    transition: opacity 200ms ease-in-out;
+}
+
+#return_top svg {
+    width: 50px;
+    height: 50px;
+}

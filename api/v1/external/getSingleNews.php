@@ -6,7 +6,8 @@
 $id = $_GET["id"];
 $year = $_GET["year"] ?? date('Y');
 
-require "../../../common/globalVar.php";
-require "../../../common/database.php";
+include "../../../common/common.php";
+$database = new database();
 
-echo json_encode(@select_data("select * from `news_".clean_input_string($year)."_archive` where `ID` = '".clean_input_string($id)."'"));
+echo json_encode($database->get_single_data("select * from `news_" . $database->clean_input_string($year) . "_archive` 
+where `ID` = '" . $database->clean_input_string($id) . "'"));

@@ -3,6 +3,8 @@ User-agent: *
 Disallow: /admin/
 Disallow: /include/
 Disallow: /html/
+Disallow: /api/
 Disallow: /queue/
 Disallow: /config/
 Disallow: /test/
+Disallow: /common/

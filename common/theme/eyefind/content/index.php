@@ -1,16 +1,18 @@
 <?php
 
+$database = new database();
+
 //推荐站点
-$recommend_site = @select_more_data("select * from `site_list`");
+$recommend_site = $database->get_multi_data("select * from `site_list`");
 shuffle($recommend_site);
 
 //赞助商广告
-$ads = @select_more_data("select * from `ads`");
-$ads_index = rand(0,(sizeof($ads)-1));
+$ads = $database->get_multi_data("select * from `ads`");
+$ads_index = rand(0, (sizeof($ads) - 1));
 
 //生成随机数
-$kotoba = @select_more_data("select * from `kotoba`");
-$kotoba_index = rand(0,(sizeof($kotoba)-1));
+$kotoba = $database->get_multi_data("select * from `kotoba`");
+$kotoba_index = rand(0, (sizeof($kotoba) - 1));
 
 ?>
 
@@ -57,7 +59,6 @@ $kotoba_index = rand(0,(sizeof($kotoba)-1));
             </div>
 
 
-
         </div>
     </div>
 
@@ -67,7 +68,8 @@ $kotoba_index = rand(0,(sizeof($kotoba)-1));
             <div class="model_title white">
                 <div class="title">赞助商广告</div>
             </div>
-            <a href="<?php echo $ads[$ads_index]["url"]; ?>" target="_blank" title="<?php echo $ads[$ads_index]["name"]; ?>">
+            <a href="<?php echo $ads[$ads_index]["url"]; ?>" target="_blank"
+               title="<?php echo $ads[$ads_index]["name"]; ?>">
                 <img src="<?php echo $ads[$ads_index]["image"]; ?>" alt/>
             </a>
         </div>
@@ -86,9 +88,9 @@ $kotoba_index = rand(0,(sizeof($kotoba)-1));
 
             </div>
 
-<!--            <div class="disable_cover">-->
-<!--                您所在的地区暂不支持动态功能-->
-<!--            </div>-->
+            <!--            <div class="disable_cover">-->
+            <!--                您所在的地区暂不支持动态功能-->
+            <!--            </div>-->
         </div>
 
     </div>
@@ -102,7 +104,8 @@ $kotoba_index = rand(0,(sizeof($kotoba)-1));
         <div class="site_list">
             <?php for ($i = 0; $i < (sizeof($recommend_site) < 10 ? sizeof($recommend_site) : 10); $i++) { ?>
 
-                <a class="item" title="<?php echo $recommend_site[$i]["name"]; ?>&#10;<?php echo $recommend_site[$i]["description"]; ?>"
+                <a class="item"
+                   title="<?php echo $recommend_site[$i]["name"]; ?>&#10;<?php echo $recommend_site[$i]["description"]; ?>"
                    href="<?php echo $recommend_site[$i]["url"]; ?>"
                    style="background-image: url('<?php echo $recommend_site[$i]["image"]; ?>')"
                    target="_blank">

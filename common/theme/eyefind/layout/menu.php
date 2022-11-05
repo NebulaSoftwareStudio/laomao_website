@@ -26,7 +26,7 @@
                 <span id="week">-</span>
             </div>
             <a href="//www.qweather.com/" target="_blank">
-                <img id="weather_image" alt src="<?php echo $baseUrl ?? '' ?>assets/images/heWeather/svg/100.svg"/>
+                <img id="weather_image" alt src="<?php echo $baseUrl ?? '' ?>assets/images/heWeather/svg/999.svg"/>
             </a>
         </div>
     </div>
@@ -109,41 +109,42 @@
                 个性化设置不会被保存到我们的服务器，所有的设置都将保存到您的浏览器缓存中。<br/>详情请参阅我们的用户隐私权保护方针。</p>
             <h3>您的地点</h3>
             <div class="description">因隐私保护考虑，新版天气接口不再通过您的IP地址自动对您定位，您可在此处更新您的位置信息。</div>
-            <div class="description">LocationId可通过
-                <a target="_blank" href="https://dev.qweather.com/docs/start/glossary#locationid">此处</a>
-                获取，稍后会推送更新添加城市检索方便您的设置。</div>
-            <input class="setting_input" id="location_input" placeholder="请输入地点ID" />
+<!--            <div class="description">LocationId可通过-->
+<!--                <a target="_blank" href="https://dev.qweather.com/docs/start/glossary#locationid">此处</a>-->
+<!--                获取，稍后会推送更新添加城市检索方便您的设置。</div>-->
+            <input class="setting_input" id="location_input" style="display: none;" placeholder="请输入地点ID" />
             <div class="location_select_box">
-                <select class="select_item" placeholder="请选择省"></select>
-                <select class="select_item" placeholder="请选择市"></select>
-                <select class="select_item" placeholder="请选择县"></select>
+                <input class="setting_input" id="locationSearchInput" placeholder="请输入地点名称检索…" />
+                <div class="location_select_list hidden" id="positionSelectList">
+                    <div class='tips'>请输入关键字…</div>
+                </div>
             </div>
             <h3>搜索引擎设置</h3>
             <div class="description">选择您的默认搜索引擎</div>
             <div class="search_target_box">
                 <label>
-                    <input type="radio" value="https://www.baidu.com/s?wd=" name="search_target" >
-                    <p>百度<span>https://www.baidu.com/s?wd=</span></p>
-                </label>
-                <label>
                     <input type="radio" value="https://www.google.com.hk/search?q=" name="search_target">
                     <p>谷歌<span>https://www.google.com.hk/search?q=</span></p>
+                </label>
+                <label>
+                    <input type="radio" value="https://www.baidu.com/s?wd=" name="search_target" >
+                    <p>百度<span>https://www.baidu.com/s?wd=</span></p>
                 </label>
                 <label>
                     <input type="radio" value="https://www.bing.com/search?q=" name="search_target">
                     <p>必应<span>https://www.bing.com/search?q=</span></p>
                 </label>
                 <label>
-                    <input type="radio" value="https://magi.com/search?q=" name="search_target">
-                    <p>Magi<span>https://magi.com/search?q=</span></p>
-                </label>
-                <label>
-                    <input type="radio" value="https://fsou.cc/search?q=" name="search_target">
-                    <p>fSou<span>https://fsou.cc/search?q=</span></p>
+                    <input type="radio" value="https://fsoufsou.com/search?q=" name="search_target">
+                    <p>fSou<span>https://fsoufsou.com/search?q=</span></p>
                 </label>
                 <label>
                     <input type="radio" value="https://www.laomao.website/?search=" name="search_target">
                     <p>laomao<span>https://www.laomao.website/?search=</span></p>
+                </label>
+                <label>
+                    <input type="radio" value="https://magi.com/search?q=" name="search_target">
+                    <p style="text-decoration:line-through;">Magi<span>【已暂停服务】https://magi.com/search?q=</span></p>
                 </label>
                 <label>
                     <input type="radio" value="custom" name="search_target">

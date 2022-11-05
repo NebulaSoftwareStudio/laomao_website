@@ -55,7 +55,7 @@ function getNewsList(monthIndex){
         month_object[monthIndex].loading = true;
 
         requestAction.getAction({
-            url: "../api/v1/external/get_news_by_month.php",
+            url: "../api/v1/external/getNewsByMonth.php",
             param: queryParam,
             success: function (res){
                 //赋值

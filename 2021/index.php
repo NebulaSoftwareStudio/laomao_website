@@ -300,7 +300,7 @@ $theme_index = rand(0,2);
 
 
 <!--外部JavaScript脚本-->
-<script type="module" src="../assets/js/year_2021.js?v=20211231001"></script>
+<script type="module" src="../common/theme/eyefind/assets/js/year_2021.js?v=20211231001"></script>
 
 
 </body>

@@ -30,7 +30,7 @@ require "../common/database.php";
     <link rel="stylesheet" href="../common/theme/eyefind/assets/css/theme.css?v=20211219001">
     <link rel="stylesheet" href="../common/theme/eyefind/assets/css/mobile_theme.css?v=20211219001">
     <link rel="stylesheet" href="../common/theme/eyefind/assets/css/year_2022.css?v=20211230001">
-    <link rel="stylesheet" href="../assets/js/dist/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../common/theme/eyefind/assets/js/dist/swiperjs/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -339,8 +339,8 @@ require "../common/database.php";
 
 
 <!--外部JavaScript脚本-->
-<script src="../assets/js/dist/swiperjs/swiper-bundle.min.js"></script>
-<script type="module" src="../assets/js/year_2022.js?v=20211231001"></script>
+<script src="../common/theme/eyefind/assets/js/dist/swiperjs/swiper-bundle.min.js"></script>
+<script type="module" src="../common/theme/eyefind/assets/js/year_2022.js?v=20211231001"></script>
 
 
 </body>

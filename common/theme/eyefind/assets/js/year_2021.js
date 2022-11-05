@@ -62,7 +62,7 @@ function getNewsList(monthIndex) {
         month_object[monthIndex].loading = true;
 
         requestAction.getAction({
-            url: "../api/v1/external/get_news_by_month.php",
+            url: "../api/v1/external/getNewsByMonth.php",
             param: queryParam,
             success: function (res) {
                 //赋值
@@ -106,7 +106,7 @@ function renderAppendNewsList(index, newsList) {
                 "    margin: -20px;\n" +
                 "    height: calc(100% + 40px);\n" +
                 "    background-size: cover; background-position: center center;\n" +
-                "    background-repeat: no-repeat; background-image: url(.." + newsList[i].topic_image + ")'  ></div>") : ("<p>" + newsList[i].description + "</p>")) +
+                "    background-repeat: no-repeat; background-image: url(.." + newsList[i].topic_image + "/../../../../assets)'  ></div>") : ("<p>" + newsList[i].description + "</p>")) +
             "            </div>\n" +
             "            <div class=\"info\">\n" +
             "                <div class=\"time\">" + newsList[i].create_time + " - 暂无分类</div>\n" +

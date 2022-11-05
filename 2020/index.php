@@ -288,7 +288,7 @@ require "../common/database.php";
 
 
 <!--外部JavaScript脚本-->
-<script type="module" src="../assets/js/year_2020.js?v=20201231001"></script>
+<script type="module" src="../common/theme/eyefind/assets/js/year_2020.js?v=20201231001"></script>
 
 
 </body>
