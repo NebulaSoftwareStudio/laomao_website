@@ -26,7 +26,7 @@ order by `create_time` desc");
 <html lang="zh">
 <head>
     <?php require "common/theme/eyefind/layout/header.php" ?>
-    <link rel="stylesheet" href="<?php echo $baseUrl ?? '' ?>common/theme/eyefind/assets/css/announcement.css?v=<?php echo $GLOBALS['SITE_VERSION'] ?? '' ?>">
+    <link rel="stylesheet" href="<?php echo $baseUrl ?? '' ?>common/theme/eyefind/assets/css/announcement.css?v=<?php echo SOLAR_PROJECT_VERSION ?? '' ?>">
 </head>
 <body>
 <?php require "common/theme/eyefind/layout/topicMenu.php"; ?>

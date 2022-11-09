@@ -4,32 +4,17 @@
  * Update on 2022/09/18
  */
 
-require "../common/globalVar.php";
-require "../common/database.php";
+include "../common/common.php";
+
+$baseUrl = "../";
+$page_title = "欢迎查看2022年新闻时间线";
 
 ?>
 
 <html>
 <head>
-    <meta charset="UTF-8">
-
-    <!-- SEO -->
-    <title>欢迎查看 2022 年新闻时间线 | Laomao - 把握时代脉搏，倾听世界声音</title>
-    <meta name="Description" content="我们在首页提供了第三方新闻源丰富您的使用体验，同时我们也进行存档供您回顾这一年推送的全部新闻消息。">
-    <meta name="Keywords" content="LaoMao,老猫,老帽,搜索,门户">
-    <meta name="author" content="Nebula Software Studio">
-    <meta name="revised" content="Hanawa Hinata 2021/12/19">
-    <meta name="generator" content="PhpStorm">
-    <!-- SEO end -->
-
-    <!--视口属性，用于自适应-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-
-    <!--外部样式表-->
-    <!--    <link rel="stylesheet" href="assets/css/theme.css?v=2020101202">-->
-    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/theme.css?v=20211219001">
-    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/mobile_theme.css?v=20211219001">
-    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/year_2022.css?v=20211230001">
+    <?php require "../common/theme/eyefind/layout/header.php" ?>
+    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/year_2022.css?v=<?php echo SOLAR_PROJECT_VERSION; ?>">
     <link rel="stylesheet" href="../common/theme/eyefind/assets/js/dist/swiperjs/swiper-bundle.min.css">
 </head>
 <body>
@@ -214,7 +199,7 @@ require "../common/database.php";
                             <div class="news_item">
                                 <div class="news_image"></div>
                                 <div class="news_info">
-                                    <div class="title">这是一则月度新闻标题 有可能会有断句而且有点长但不会太长</div>
+                                    <div class="title">这是一则月度新闻标题 </div>
                                     <div class="description">据BBC报道，有一篇新闻标题可能会很长但不会太长，而且还会出现空格断句。这下面是新闻的简要说明，会很长很长很长，因此需要用样式给截断它？也许不需要。</div>
                                 </div>
                             </div>
@@ -232,7 +217,7 @@ require "../common/database.php";
                             <div class="news_item">
                                 <div class="news_image"></div>
                                 <div class="news_info">
-                                    <div class="title">这是一则月度新闻标题 有可能会有断句而且有点长但不会太长</div>
+                                    <div class="title">这是一则月度新闻标题 有可能会有断句而且有点长但不会太长这是一则月度新闻标题 有可能会有断句而且有点长但不会太长</div>
                                     <div class="description">据BBC报道，有一篇新闻标题可能会很长但不会太长，而且还会出现空格断句。这下面是新闻的简要说明，会很长很长很长，因此需要用样式给截断它？也许不需要。</div>
                                 </div>
                             </div>

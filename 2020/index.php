@@ -1,32 +1,20 @@
 <?php
-require "../common/globalVar.php";
-require "../common/database.php";
+/**
+ * 2020年专题
+ */
+
+include "../common/common.php";
+
+$baseUrl = "../";
+$page_title = "欢迎查看2020年新闻时间线";
 
 ?>
-
-
 
 <html>
 <head>
     <meta charset="UTF-8">
-
-    <!-- SEO -->
-    <title>欢迎查看 2020 年新闻时间线 | Laomao - 把握时代脉搏，倾听世界声音</title>
-    <meta name="Description" content="我们在首页提供了第三方新闻源丰富您的使用体验，同时我们也进行存档供您回顾这一年推送的全部新闻消息。">
-    <meta name="Keywords" content="LaoMao,老猫,老帽,搜索,门户">
-    <meta name="author" content="Nebula Software Studio">
-    <meta name="revised" content="Hanawa Hinata 2019/05/27">
-    <meta name="generator" content="PhpStorm">
-    <!-- SEO end -->
-
-    <!--视口属性，用于自适应-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-
-    <!--外部样式表-->
-    <!--    <link rel="stylesheet" href="assets/css/theme.css?v=2020101202">-->
-    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/theme.css?v=20201231001">
-    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/mobile_theme.css?v=20201231001">
-    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/year_2020.css?v=20201231001">
+    <?php require "../common/theme/eyefind/layout/header.php" ?>
+    <link rel="stylesheet" href="../common/theme/eyefind/assets/css/year_2020.css?v=<?php echo SOLAR_PROJECT_VERSION; ?>">
 </head>
 <body>
 
