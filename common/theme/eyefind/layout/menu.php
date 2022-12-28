@@ -35,7 +35,7 @@
     <div class="search_box">
         <div class="input">
             <img class="icon" alt src="<?php echo $baseUrl ?? '' ?>assets/images/search.png"/>
-            <input type="text" value="<?php echo isset($_GET["search"])?$_GET["search"]:''; ?>" id="keyword_input" placeholder="搜索或键入网址…" maxlength="38"/>
+            <input type="text" value="<?php echo isset($_GET["search"])?htmlspecialchars($_GET["search"]):''; ?>" id="keyword_input" placeholder="搜索或键入网址…" maxlength="38"/>
         </div>
         <div class="button_box">
             <div class="button" id="submit_button">发起检索</div>
