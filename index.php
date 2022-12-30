@@ -6,7 +6,7 @@
 include "common/common.php";
 
 if(isset($_GET["search"])){
-    $page_title = $_GET["search"]." 的相关检索结果";
+    $page_title = htmlspecialchars($_GET["search"])." 的相关检索结果";
 }
 
 ?>
