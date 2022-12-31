@@ -3,8 +3,8 @@
  * 定期更新 pornSite 数据库
  */
 
-require "../../../common/globalVar.php";
-require "../../../common/database.php";
+include "../../../common/common.php";
+$database = new database();
 
 // 获取目标网页内容
 $webContent = file_get_contents("https://lspimg.com/pornsites.html");
@@ -44,7 +44,7 @@ for($i=0;$i<sizeof($pat_array[0]);$i++){
 
     array_push($newArray, $itemArray);
 
-    $status = insert_data("INSERT INTO `porn_site`(`url`, `title`, `sourceUpdateTime`) SELECT 
+    $status = $database->add_data("INSERT INTO `porn_site`(`url`, `title`, `sourceUpdateTime`) SELECT 
 '$url', '$title', '$time' FROM DUAL WHERE NOT EXISTS(SELECT `url` FROM
 `porn_site` WHERE `url` = '$url');");
     array_push($statusArray, $status);

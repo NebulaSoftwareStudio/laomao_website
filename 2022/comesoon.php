@@ -28,14 +28,50 @@
     <div class="container">
         <div class="heading text-center">
             <h2>把握时代脉搏，倾听世界声音<br/>2022年新闻时间线将于2023年初开放</h2>
-            <strong>我们正在收集本年所有新闻进行采编汇总，最后将以时间线和精选方式提供给您。这是一项采用舆情监测算法的自动化过程，结果将在2023年1月1日开放，敬请期待！</strong></div>
+            <p>我们正在收集本年所有新闻进行采编汇总，最后将以时间线和精选方式提供给您。这是一项采用舆情监测算法的自动化过程，结果将在2023年1月1日开放，敬请期待！</p></div>
         <div class="countdown styled">
-            <div>000 <span>天</span></div>
-            <div>00 <span>时</span></div>
-            <div>00 <span>分</span></div>
-            <div>00 <span>秒</span></div>
+            <div><b id="day">000</b> <span>天</span></div>
+            <div><b id="hour">000</b> <span>时</span></div>
+            <div><b id="mini">000</b> <span>分</span></div>
+            <div><b id="sec">000</b> <span>秒</span></div>
         </div>
     </div>
 </div>
+<script>
+    const comeSoonPage = {
+        data: {
+            currentTime: <?php echo time(); ?>,
+            endTime: 1672502400,
+            intervalTarget: null,
+        },
+        methods: {
+            initCountDown: function (){
+                let rangeTimeSec = comeSoonPage.data.endTime - comeSoonPage.data.currentTime;
+                if(rangeTimeSec>=0){
+                    let day = parseInt(rangeTimeSec/86400);
+                    let hour = parseInt((rangeTimeSec%86400)/3600);
+                    let mini = parseInt(((rangeTimeSec%86400)%3600)/60);
+                    let sec = parseInt(((rangeTimeSec%86400)%3600)%60);
+                    document.getElementById("day").innerText = day;
+                    document.getElementById("hour").innerText = hour;
+                    document.getElementById("mini").innerText = mini;
+                    document.getElementById("sec").innerText = sec;
+                    comeSoonPage.data.currentTime += 1;
+                }else{
+                    alert("欢迎来到2023年！");
+                    window.location.reload();
+                }
+            },
+        },
+        created: function (){
+            comeSoonPage.data.intervalTarget = setInterval(function (){
+                comeSoonPage.methods.initCountDown()
+            }, 1000);
+        },
+    }
+
+
+    comeSoonPage.created();
+</script>
 </body>
 </html>

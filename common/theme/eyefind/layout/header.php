@@ -1,22 +1,9 @@
 <?php
-
-if(isset($_GET["page"])&&$_GET["page"]==='about'){
-    switch($_GET["classify"]){
-        case 'privacy': $page_title='隐私权政策';break;
-        case 'EULA': $page_title='服务条款';break;
-        case 'about': $page_title='关于本站';break;
-        case 'license': $page_title='开放源代码许可';break;
-        default: $page_title='';
-    }
-}
-else {
-    if(isset($_GET["search"])){
-        $page_title = $_GET["search"]." 的相关检索结果";
-    }
-}
-
-
-
+/**
+ * 全局头部文件
+ * 引入前必须引入 common/config.php
+ * 并定义 $page_title 和 $baseUrl 变量
+ */
 ?>
 
 
@@ -32,13 +19,13 @@ else {
     <!--视口属性，用于自适应-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <!--外部样式表-->
-    <!--    <link rel="stylesheet" href="assets/css/theme.css?v=2020101202">-->
-    <link rel="stylesheet" href="<?php echo $baseUrl ?? '' ?>common/theme/eyefind/assets/css/theme.css?v=<?php echo $GLOBALS['SITE_VERSION'] ?? '' ?>">
-    <link rel="stylesheet" href="<?php echo $baseUrl ?? '' ?>common/theme/eyefind/assets/css/mobile_theme.css?v=<?php echo $GLOBALS['SITE_VERSION'] ?? '' ?>">
+    <link rel="stylesheet" href="<?php echo $baseUrl ?? '' ?>common/theme/eyefind/assets/css/theme.css?v=<?php echo SOLAR_PROJECT_VERSION ?? '' ?>">
+    <link rel="stylesheet" href="<?php echo $baseUrl ?? '' ?>common/theme/eyefind/assets/css/mobile_theme.css?v=<?php echo SOLAR_PROJECT_VERSION ?? '' ?>">
 
 
 
     <style>
+        /*将页面更换为纪念样式（黑白色彩）*/
         /*html{*/
         /*    filter: grayscale(100%);*/
         /*}*/

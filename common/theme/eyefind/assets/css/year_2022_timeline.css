@@ -1,0 +1,172 @@
+/**
+ * 2022年新闻时间线 月度时间线列表样式
+ */
+
+.head{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.head .brand_box .weather_box a{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .head .brand_box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .head .brand_box .weather_box{
+        display: block !important;
+        line-height: 40px;
+    }
+
+    .timeline_box .timeline_content .date_item h1{
+        top: 180px !important;
+    }
+}
+
+.timeline_box{
+    width: 100%;
+}
+
+.timeline_box .timeline_content{
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.timeline_box .timeline_content .date_item{
+    width: 100%;
+    border-left: 4px dashed #888888;
+    box-sizing: border-box;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 5px;
+}
+.timeline_box .timeline_content .date_item:last-child{
+    padding-bottom: 0;
+}
+
+
+.timeline_box .timeline_content .date_item h1{
+    font-size: 15pt;
+    padding: 20px 0;
+    margin-left: -32px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    line-height: 100%;
+    color: #488bc2;
+    position: sticky;
+    top: 140px;
+    z-index: 98;
+    background-color: #ffffff;
+}
+
+.timeline_box .timeline_content .date_item h1:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #488bc2;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.timeline_box .timeline_content .date_item .news_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px auto;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item{
+    width: 260px;
+    overflow: hidden;
+    margin: 5px;
+    background-color: #ffffff;
+    transition: box-shadow 100ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid #d9d9d9;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item:hover{
+    box-shadow: 0 20px 20px -10px rgba(0,0,0,0.2);
+    transition: box-shadow 100ms ease-in-out;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .topic{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    font-size: 10pt;
+    color: #d9d9d9;
+    background-color: #888888;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .topic img{
+    display: block;
+    width: calc(100% + 40px);
+    margin: -20px;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .info{
+    width: 100%;
+    height: 126px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .info .time{
+    width: 250px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    color: #888888;
+    font-size: 8pt;
+    position: relative;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .info .time{
+    width: 250px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    color: #888888;
+    font-size: 8pt;
+    position: relative;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .info .time:after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: rgb(72,139,194);
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.timeline_box .timeline_content .date_item .news_list .news_item .info .title{
+    font-size: 12pt;
+    color: #000000;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 5px 20px 20px 20px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
