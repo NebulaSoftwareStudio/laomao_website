@@ -53,6 +53,7 @@ $news_list = $database -> get_multi_data("select * from `news_2022_archive` wher
             $day_string = $current_day < 10?'0'.$current_day:$current_day;
             $date_string = "2022-".$month."-".$day_string;
             if($news_list[$i]["create_time"] < $date_string){
+
                 echo "<a href=\"../index.php?news=".$news_list[$i]["ID"]."&year=2022\" target=\"_blank\" class=\"news_item\">";
                 echo "<div class=\"topic\">";
                 if(isset($news_list[$i]["topic_image"])&&$news_list[$i]["topic_image"]!=''){
@@ -102,6 +103,5 @@ $news_list = $database -> get_multi_data("select * from `news_2022_archive` wher
         }
         ?>
     </div>
-
 </div>
 

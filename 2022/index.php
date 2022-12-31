@@ -5,9 +5,9 @@
  */
 
 // 获取当前时间戳
-if (time() < 1672502400 && !isset($_GET["mode"])) {
-    require "comesoon.php";
-} else{
+//if (time() < 1672502400 && !isset($_GET["mode"])) {
+//    require "comesoon.php";
+//} else{
     require "2022.php";
-}
+//}
 

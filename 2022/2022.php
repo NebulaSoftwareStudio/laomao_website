@@ -146,6 +146,7 @@ for ($i = 1; $i <= 12; $i++) {
                                             <div class="description"><?php echo $newsList[$j]["description"]; ?></div>
                                         </div>
                                     </a>
+
                                 </div>
                                 <?php
                             }

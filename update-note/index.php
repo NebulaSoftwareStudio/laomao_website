@@ -12,7 +12,7 @@ $page_title = "laomao.website 的最新变化";
 <div class="about">
     <div class="model">
         <h1>laomao.website 的最新变化</h1>
-        <span>本内容最终更新于 2022 年 06 月 21 日</span>
+        <span>本内容最终更新于 2022 年 12 月 31 日</span>
         <h3 id="feature">将在新版本中推出</h3>
         <h4>基础</h4>
         <ol>
