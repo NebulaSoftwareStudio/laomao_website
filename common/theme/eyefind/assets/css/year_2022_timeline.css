@@ -116,7 +116,8 @@
 
 .timeline_box .timeline_content .date_item .news_list .news_item .topic img{
     display: block;
-    width: 100%;
+    width: calc(100% + 40px);
+    margin: -20px;
 }
 
 .timeline_box .timeline_content .date_item .news_list .news_item .info{

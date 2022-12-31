@@ -44,6 +44,7 @@ const main = {
                     document.getElementById("news_title").innerText = res.title;
                     document.getElementById("news_time").innerText = '更新于：' + res.create_time;
                     document.getElementById("news_content").innerHTML = res.content;
+                    // document.getElementById("news_link").href = "index.php?news="+res.ID+"&year="+res.create_time.substr(0, 4);
                     document.getElementById("news_link").href = res.link;
                     document.getElementById("news_cover").style = 'display:none';
                 },

@@ -60,7 +60,7 @@ const SOLAR_REDIS_ADDRESS = "";
 /**
  * ====================  项目相关  ====================
  */
-const SOLAR_PROJECT_VERSION = "20220314001";
+const SOLAR_PROJECT_VERSION = "20221231001";
 
 /**
  * ====================  第三方接口  ====================

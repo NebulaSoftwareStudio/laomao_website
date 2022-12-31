@@ -13,6 +13,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: "方正兰亭黑","小米兰亭 Pro VF", "思源宋体 CN", 微软雅黑, serif;
 }
 
 body{
@@ -612,7 +613,7 @@ a:hover{
     width:150px;
     float: right;
     display: block;
-    margin: 0 auto;
+    margin: 0 0 0 10px;
 }
 
 .content .index_left_box .news #news_title{
@@ -666,6 +667,71 @@ a:hover{
 .content .index_left_box .news .read_more .item{
     display: block;
     margin: 0 10px;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+/* news detail */
+.content .index_left_box .news_detail{
+    overflow: hidden;
+    padding: 20px;
+}
+
+.content .index_left_box .news_detail .news_detail_image{
+    overflow: hidden;
+    margin: -20px -20px 0 -20px;
+    width: calc(100% + 40px);
+    height: fit-content;
+}
+
+.content .index_left_box .news_detail .source_site_logo{
+    width:150px;
+    float: right;
+    display: block;
+    margin: 0 0 0 10px;
+}
+
+.content .index_left_box .news_detail .news_title{
+    margin-top: 20px;
+}
+
+.content .index_left_box .news_detail .news_title .title{
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.content .index_left_box .news_detail .news_time{
+    font-size: 8pt;
+    color: #888888;
+    margin: 10px 0;
+}
+
+.content .index_left_box .news_detail .news_content{
+    font-size: 13pt;
+    color: #353535;
+    margin: 20px 0;
+}
+
+.content .index_left_box .news_detail .news_content p{
+    margin: 10px 0;
+}
+
+.content .index_left_box .news_detail .news_content a{
+    text-decoration: underline;
+    margin: 5px;
+}
+
+.content .index_left_box .news_detail .read_more{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content .index_left_box .news_detail .read_more .item{
+    display: block;
     font-weight: bold;
     font-size: 11pt;
 }

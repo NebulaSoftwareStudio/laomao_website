@@ -2,15 +2,15 @@
 
 $database = new database();
 
-//推荐站点
+// 随机获取10条特色网站
 $recommend_site = $database->get_multi_data("select * from `site_list`");
 shuffle($recommend_site);
 
-//赞助商广告
+// 随机获取一条赞助商广告
 $ads = $database->get_multi_data("select * from `ads`");
 $ads_index = rand(0, (sizeof($ads) - 1));
 
-//生成随机数
+// 随机获取一条动态
 $kotoba = $database->get_multi_data("select * from `kotoba`");
 $kotoba_index = rand(0, (sizeof($kotoba) - 1));
 
@@ -106,7 +106,7 @@ $kotoba_index = rand(0, (sizeof($kotoba) - 1));
 
                 <a class="item"
                    title="<?php echo $recommend_site[$i]["name"]; ?>&#10;<?php echo $recommend_site[$i]["description"]; ?>"
-                   href="<?php echo $recommend_site[$i]["url"]; ?>"
+                   href="<?php echo $recommend_site[$i]["methods"]; ?>://<?php echo $recommend_site[$i]["url"]; ?>"
                    style="background-image: url('<?php echo $recommend_site[$i]["image"]; ?>')"
                    target="_blank">
                 </a>

@@ -10,7 +10,7 @@
     background-color: #000000;
     height: 100vh;
     margin-top: -140px;
-    background-image: url("https://ychef.files.bbci.co.uk/1600x900/p0d03j4t.webp");
+    background-image: url("../../../../../assets/images/year_2022/photo_2022-12-04_11-34-17.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -27,7 +27,7 @@
 .main_banner .content {
     width: 100%;
     height: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     box-sizing: border-box;
     /*padding: 180px 40px 40px;*/
     padding: 40px;
@@ -38,6 +38,28 @@
     justify-content: center;
     position: relative;
     z-index: 5;
+}
+
+.main_banner .content .source_info {
+    font-size: 8pt;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.main_banner .content .source_info a{
+    text-decoration: underline;
+}
+
+.main_banner .content .source_info:after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .main_banner .content .title {
@@ -63,6 +85,9 @@
 .main_banner .content .sub_title {
     font-size: 15pt;
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 
@@ -77,7 +102,7 @@
 
 .main_description_box .content {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
     flex-flow: column;
     box-sizing: border-box;
@@ -109,7 +134,8 @@
 }
 
 .century_name_box .item {
-    width: 25%;
+    width: 300px;
+    flex: auto;
     height: 50px;
     align-content: center;
     display: flex;
@@ -140,11 +166,12 @@
     width: 100%;
     background-color: #000000;
     overflow: hidden;
+    position: relative;
 }
 
 .month_box .content {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
     flex-flow: column;
     /*align-items: center;*/
@@ -153,6 +180,8 @@
     overflow: unset;
     box-sizing: border-box;
     padding: 0 20px 40px 20px;
+    position: relative;
+    z-index: 9;
 }
 
 .month_box .content h2 {
@@ -201,16 +230,44 @@
     font-size: 8pt;
 }
 
+.month_box .topic_news_image_cover{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.month_box .topic_news_image_item{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top -200px center;
+    transition: opacity 200ms ease-in-out;
+}
+.month_box .topic_news_image_item.hidden{
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
 /* 每月新闻 */
 .month_news_box{
     width: 100%;
 }
 .month_news_box .content{
     width: 100%;
+    max-width: unset;
 }
 .month_news_box .content h2{
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 20px auto 40px auto;
     box-sizing: border-box;
     padding: 0 20px;
@@ -223,6 +280,15 @@
 }
 
 .month_news_box .month_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.month_news_box .month_title .title{
     font-size: 25pt;
     height: 100px;
     font-weight: bolder;
@@ -234,7 +300,7 @@
     user-select: none;
 }
 
-.month_news_box .month_title:after{
+.month_news_box .month_title .title:after{
     content: '';
     display: block;
     width: 130px;
@@ -244,7 +310,7 @@
     left: 0;
 }
 
-.month_news_box .month_title:before{
+.month_news_box .month_title .title:before{
     content: '';
     display: block;
     width: 150px;
@@ -255,7 +321,7 @@
     bottom: 20px;
 }
 
-.month_news_box .month_title span{
+.month_news_box .month_title .title span{
     width: 10px;
     height: 10px;
     margin-left: 10px;
@@ -263,18 +329,22 @@
     background-color: rgb(72,139,194);
 }
 
+.month_news_box .month_title a{
+    width: fit-content;
+}
 
 .month_news_box .content .month_item .news_list{
     width: 100%;
     height: 400px;
     margin: 20px auto 40px auto;
     box-sizing: border-box;
-    /*padding: 0 20px;*/
+    padding: 0 10px;
     position: relative;
 }
 
 .month_news_box .content .month_item .news_list .news_item{
     position: relative;
+    display: block;
     width: 100%;
     flex: auto;
     /*margin: 10px ;*/
@@ -329,12 +399,72 @@
     margin: 0 0 10px 0;
 }
 
+.month_news_box .content .month_item .news_list .news_item .news_info .time{
+    font-size: 8pt;
+    line-height: 100%;
+    color: #888888;
+    margin: 0 0 10px 0;
+}
+
 .month_news_box .content .month_item .news_list .news_item .news_info .description{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.month_news_box .content .month_item .news_list .show_timeline_button{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: #353535;
+    box-shadow: 0 0 0 0 rgba(0,0,0,.1);
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    transition: box-shadow 200ms ease-in-out;
+    background-color: #ffffff;
+    cursor: default;
+    user-select: none;
+}
+
+.month_news_box .content .month_item .news_list .show_timeline_button .logo{
+    width: 80px;
+    height: 80px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB0PSIxNjA5MTYzOTU1NjcwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciDQoJIHAtaWQ9IjE4MzUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+DQoJPGRlZnM+DQoJCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT4NCgk8L2RlZnM+DQoJPHBhdGggZD0iTTkzOC42NjY2NjcgNTEyYzAgMjM1LjY0OC0xOTEuMDE4NjY3IDQyNi42NjY2NjctNDI2LjY2NjY2NyA0MjYuNjY2NjY3Uzg1LjMzMzMzMyA3NDcuNjQ4IDg1LjMzMzMzMyA1MTIgMjc2LjM1MiA4NS4zMzMzMzMgNTEyIDg1LjMzMzMzM3M0MjYuNjY2NjY3IDE5MS4wMTg2NjcgNDI2LjY2NjY2NyA0MjYuNjY2NjY3eiBtLTg1LjMzMzMzNCAwYTM0MS4zMzMzMzMgMzQxLjMzMzMzMyAwIDEgMC02ODIuNjY2NjY2IDAgMzQxLjMzMzMzMyAzNDEuMzMzMzMzIDAgMCAwIDY4Mi42NjY2NjYgMHogbS0zMTEuMTY4LTE1OC4xNjUzMzNsMTI4IDEyOGE0Mi42NjY2NjcgNDIuNjY2NjY3IDAgMCAxLTYwLjMzMDY2NiA2MC4zMzA2NjZMNTU0LjY2NjY2NyA0ODYuOTk3MzMzVjY0MGE0Mi42NjY2NjcgNDIuNjY2NjY3IDAgMSAxLTg1LjMzMzMzNCAwdi0xNTMuMDAyNjY3bC01NS4xNjggNTUuMTY4YTQyLjY2NjY2NyA0Mi42NjY2NjcgMCAwIDEtNjAuMzMwNjY2LTYwLjMzMDY2NmwxMjgtMTI4YTQyLjY2NjY2NyA0Mi42NjY2NjcgMCAwIDEgNjAuMzMwNjY2IDB6Ig0KCQkgIGZpbGw9IiM0ODhiYzIiIHAtaWQ9IjE4MzYiPjwvcGF0aD4NCjwvc3ZnPg==);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    transform: rotate(0deg);
+    transition: transform 500ms ease-in-out;
+}
+
+.month_news_box .content .month_item .news_list .show_timeline_button .text{
+    font-size: 15pt;
+    font-weight: 400;
+    transition: font-weight 500ms ease-in-out;
+}
+
+.month_news_box .content .month_item .news_list .swiper-slide-active .show_timeline_button,
+.month_news_box .content .month_item .news_list .show_timeline_button:hover{
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
+    color: #057291;
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.month_news_box .content .month_item .news_list .swiper-slide-active .show_timeline_button .logo,
+.month_news_box .content .month_item .news_list .show_timeline_button:hover .logo{
+    transform: rotate(90deg);
+    transition: transform 500ms ease-in-out;
+}
+
+.month_news_box .content .month_item .news_list .swiper-slide-active .show_timeline_button .text,
+.month_news_box .content .month_item .news_list .show_timeline_button:hover .text{
+    font-weight: bold;
+    transition: font-weight 500ms ease-in-out;
 }
 
 /*返回顶部*/

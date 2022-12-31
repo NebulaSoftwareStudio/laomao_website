@@ -24,6 +24,8 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .heading {
@@ -43,7 +45,7 @@
     line-height: 1.2;
 }
 
-.heading strong {
+.heading p {
     color: #ffffff;
     font-size: 22px;
     font-weight: normal;
@@ -68,7 +70,7 @@
     text-shadow: none;
     vertical-align: middle;
     color: #FFFFFF;
-    margin: 10px 30px;
+    margin: 10px 15px;
     height: auto;
     padding-bottom: 15px;
     font-family: 'Fjalla One', sans-serif;
@@ -86,4 +88,18 @@
     text-transform: uppercase;
     border-top: 1px solid #ffffff4a;
     padding: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .heading h2{
+        text-align: left;
+    }
+
+    .heading p{
+        text-align: left !important;
+    }
+
 }

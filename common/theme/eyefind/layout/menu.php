@@ -45,25 +45,10 @@
 </div>
 
 
-<!--<a href="/2020" class="announcement">-->
-<!--    <div class="title">欢迎查看 2020 年新闻时间线</div>-->
-<!--</a>-->
-<!--<a href="./about-shipwrecks-collection/" class="announcement">-->
-<!--    <div class="title">关于 GTA 在线模式中沉船碎片的位置确认技巧</div>-->
-<!--</a>-->
-<!--<a href="https://tieba.baidu.com/p/7576816281" class="announcement">-->
-    <!--<div class="title">万圣节预热活动：UFO 观光事件现已启用</div>-->
-<!--</a>-->
-<!--<a href="/2021" class="announcement">-->
-<!--    <div class="title">欢迎查看 2021 年新闻时间线</div>-->
-<!--</a>-->
-<!--<a href="./against-the-invasion-of-Ukraine" class="announcement">-->
-<!--    <div class="title">俄罗斯对乌克兰的入侵与我们的态度</div>-->
-<!--</a>-->
-<!--<a href="https://www.ceair.com/global/static/Announcement/AnnouncementMessage/notices/202203/t20220321_21223.html" class="announcement">-->
-<!--    <div class="title">中国东方航空5735号班机空难</div>-->
-<!--</a>-->
-<div class="announcement"></div>
+<a href="/2022" class="announcement">
+    <div class="title">欢迎查看 2022 年新闻时间线</div>
+</a>
+<!--<div class="announcement"></div>-->
 
 
 <div class="nav">
@@ -109,9 +94,9 @@
                 个性化设置不会被保存到我们的服务器，所有的设置都将保存到您的浏览器缓存中。<br/>详情请参阅我们的用户隐私权保护方针。</p>
             <h3>您的地点</h3>
             <div class="description">因隐私保护考虑，新版天气接口不再通过您的IP地址自动对您定位，您可在此处更新您的位置信息。</div>
-<!--            <div class="description">LocationId可通过-->
-<!--                <a target="_blank" href="https://dev.qweather.com/docs/start/glossary#locationid">此处</a>-->
-<!--                获取，稍后会推送更新添加城市检索方便您的设置。</div>-->
+            <!--            <div class="description">LocationId可通过-->
+            <!--                <a target="_blank" href="https://dev.qweather.com/docs/start/glossary#locationid">此处</a>-->
+            <!--                获取，稍后会推送更新添加城市检索方便您的设置。</div>-->
             <input class="setting_input" id="location_input" style="display: none;" placeholder="请输入地点ID" />
             <div class="location_select_box">
                 <input class="setting_input" id="locationSearchInput" placeholder="请输入地点名称检索…" />

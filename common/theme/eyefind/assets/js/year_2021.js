@@ -106,7 +106,7 @@ function renderAppendNewsList(index, newsList) {
                 "    margin: -20px;\n" +
                 "    height: calc(100% + 40px);\n" +
                 "    background-size: cover; background-position: center center;\n" +
-                "    background-repeat: no-repeat; background-image: url(.." + newsList[i].topic_image + "/../../../../assets)'  ></div>") : ("<p>" + newsList[i].description + "</p>")) +
+                "    background-repeat: no-repeat; background-image: url(.." + newsList[i].topic_image + ")'  ></div>") : ("<p>" + newsList[i].description + "</p>")) +
             "            </div>\n" +
             "            <div class=\"info\">\n" +
             "                <div class=\"time\">" + newsList[i].create_time + " - 暂无分类</div>\n" +

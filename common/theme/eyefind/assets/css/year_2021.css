@@ -346,7 +346,9 @@
 
 .month_item .month_news_list .news_item .topic img{
     display: block;
-    width: 100%;
+    width: calc(100% + 40px);
+    margin: -20px;
+    height: calc(100% + 40px);
 }
 
 .month_item .month_news_list .news_item .info{
